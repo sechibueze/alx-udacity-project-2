@@ -2,5 +2,9 @@
   {
     "ParameterKey": "AppID",
     "ParameterValue": "Udagram"
+  },
+  {
+    "ParameterKey": "InstanceKeyPair",
+    "ParameterValue": "udagram"
   }
 ]

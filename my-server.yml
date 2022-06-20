@@ -4,6 +4,8 @@ Parameters:
   AppID:
     Type: String
     Default: Udagram
+  InstanceKeyPair:
+    Type: String
 Resources:
   LBSecGroup:
     Type: AWS::EC2::SecurityGroup
@@ -53,7 +55,7 @@ Resources:
           sudo systemctl start apache2.service
           echo "You can see that it is working..." > /var/www/html/index.html
       ImageId: ami-005de95e8ff495156
-      KeyName: udagram
+      KeyName: !Ref InstanceKeyPair
       SecurityGroups:
         - Ref: WebServerSecGroup
       InstanceType: t2.medium
